@@ -1,0 +1,32 @@
+{
+   "name": "artora-ws",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "nodemon": "^2.0.4",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "apollo-server": "^2.14.2",
+      "bcrypt": "^5.0.0",
+      "class-validator": "^0.12.2",
+      "graphql": "^15.1.0",
+      "lorem-ipsum": "^2.0.3",
+      "otp-generator": "^1.1.0",
+      "pg": "^8.2.1",
+      "reflect-metadata": "^0.1.13",
+      "shortid": "^2.2.15",
+      "type-graphql": "^1.0.0-rc.2",
+      "typeorm": "0.2.25"
+   },
+   "scripts": {
+      "dev": "nodemon -w src --ext ts --exec ts-node src/index.ts",
+      "start": "ts-node src/index.ts",
+      "schema-sync": "ts-node ./node_modules/typeorm/cli.js schema:sync",
+      "schema-drop": "ts-node ./node_modules/typeorm/cli.js schema:drop",
+      "migration": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "migration-revert": "ts-node ./node_modules/typeorm/cli.js migration:revert"
+   }
+}
